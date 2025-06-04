@@ -77,7 +77,7 @@ git show
 
 **git commit --amend :** Opens up the most recent commit and allows you to edit the commit message
 
-**git diff** : Display the current unsaved changes on the current branch, this is recommended to run before actually adding changes and committing them
+**git diff** : Display the current unsaved changes on the current branch, this is recommended to run before actually adding changes and committing them (for example; to check what changes you have made if you forgot before you "add" your changes)
 
 ## UNDO CHANGES
 
@@ -239,7 +239,7 @@ git fetch origin main
 	- So we will finally just "Push", and both local and remote will be up to date to the exact same point
 
 ## 𝗞𝗲𝘆 𝗗𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲𝘀
--Study well these commands, they may come in handy
+Study well these commands, they may come in handy
 
 𝗴𝗶𝘁 𝗳𝗲𝘁𝗰𝗵 𝘃𝘀 𝗴𝗶𝘁 𝗽𝘂𝗹𝗹: Both download data from a remote repository. However, git fetch just downloads it without integrating it, while git pull also merges it into your local files.
 
@@ -255,14 +255,15 @@ git fetch origin main
 -Sometimes we want to "ignore" files in our current working directory, to prevent these files to be ever added to a "track" status, or "modified" or "committed" status, that way we can continuously modify those files and never having to fear committing them and pushing them by mistake, to do this, we tell GIT to "ignore" these files
 
 -To ignore files, we sent them to our local ".gitignore" file
-
+```
 echo "FILE.NAME" >> .gitignore
 echo "storyfinal.txt" >> .gitignore
+```
 
--NOTE: As you might have noticed the .gitignore file itself may be listed as untracked. It is a good practice to track the .gitignore file with git
+>NOTE: As you might have noticed the .gitignore file itself may be listed as untracked. It is a good practice to track the .gitignore file with git
 
 -To ignore directories use "/" at the end of their name
 
-.DS_Store = will ignore files named .DS_Store
-folderName/ = will ignore an entire directory
-'*.log' = will ignore any files with the .log extension
+`.DS_Store` = will ignore files named `.DS_Store`
+`folderName/` = will ignore an entire directory
+`*.log` = will ignore any files with the `.log` extension
